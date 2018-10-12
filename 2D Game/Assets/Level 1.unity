@@ -212,6 +212,7 @@ GameObject:
   - component: {fileID: 134575339}
   - component: {fileID: 134575343}
   - component: {fileID: 134575344}
+  - component: {fileID: 134575345}
   m_Layer: 0
   m_Name: PC
   m_TagString: Untagged
@@ -335,8 +336,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MoveSpeed: 5
-  JumpHeight: 0
-  groundCheck: {fileID: 0}
+  JumpHeight: 5
+  groundCheck: {fileID: 833558747}
   groundCheckRadius: 0
   whatIsGround:
     serializedVersion: 2
@@ -354,6 +355,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   FirePoint: {fileID: 1634575005}
   Projectile: {fileID: 1690728567}
+--- !u!114 &134575345
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 134575338}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d3bb585cdb1540aeb2c378069222ab7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CurrentCheckPoint: {fileID: 2130342051}
+  PC: {fileID: 134575339}
+  DeathParticle: {fileID: 278438140}
+  RespawnParticle: {fileID: 786614795}
+  RespawnDelay: 0
+  PointPenaltyOnDeath: 1
 --- !u!1 &278438140 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1921395535785210, guid: ab53a6e05e6474aeaba1abd6c2148cdb,
@@ -907,6 +925,46 @@ Prefab:
       propertyPath: m_Radius
       value: 0.1
       objectReference: {fileID: 0}
+    - target: {fileID: 1833505253387792, guid: 6b0b649f348d64df4a773fdcbf914beb, type: 2}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000,
+        type: 0}
+    - target: {fileID: 212434778117443264, guid: 6b0b649f348d64df4a773fdcbf914beb,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 212434778117443264, guid: 6b0b649f348d64df4a773fdcbf914beb,
+        type: 2}
+      propertyPath: m_Size.x
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 212434778117443264, guid: 6b0b649f348d64df4a773fdcbf914beb,
+        type: 2}
+      propertyPath: m_Size.y
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 212434778117443264, guid: 6b0b649f348d64df4a773fdcbf914beb,
+        type: 2}
+      propertyPath: m_WasSpriteAssigned
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 212434778117443264, guid: 6b0b649f348d64df4a773fdcbf914beb,
+        type: 2}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 212434778117443264, guid: 6b0b649f348d64df4a773fdcbf914beb,
+        type: 2}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 212434778117443264, guid: 6b0b649f348d64df4a773fdcbf914beb,
+        type: 2}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6b0b649f348d64df4a773fdcbf914beb, type: 2}
   m_IsPrefabParent: 0
@@ -921,7 +979,7 @@ GameObject:
   m_Layer: 0
   m_Name: FirePoint
   m_TagString: Untagged
-  m_Icon: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -955,7 +1013,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: 50
-  Player: {fileID: 134575339}
+  PC: {fileID: 134575339}
   EnemyDeath: {fileID: 278438140}
   ProjectileParticle: {fileID: 786614795}
   PointsForKill: 5
