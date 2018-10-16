@@ -23,7 +23,7 @@ public class LevelManager : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        //PC = FindObjectOfType<Rigidbody2D>();
+        //PC = FindObjectOfType<Rigidbody2D> ();
 		}
 	
     public void RespawnPlayer(){
@@ -34,7 +34,7 @@ public class LevelManager : MonoBehaviour {
         // Generate Death Particle
         Instantiate (DeathParticle, PC.transform.position, PC.transform.rotation);
         // Hide PC
-        // PC. enabled = false
+        // PC. enabled = false;
         PC.GetComponent<Renderer> ().enabled = false;
         // Gravity Reset
         GravityStore = PC.GetComponent<Rigidbody2D>().gravityScale;

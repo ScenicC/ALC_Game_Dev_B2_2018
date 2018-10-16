@@ -338,10 +338,10 @@ MonoBehaviour:
   MoveSpeed: 5
   JumpHeight: 5
   groundCheck: {fileID: 833558747}
-  groundCheckRadius: 0
+  groundCheckRadius: 0.5
   whatIsGround:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 256
 --- !u!114 &134575344
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -370,8 +370,8 @@ MonoBehaviour:
   PC: {fileID: 134575339}
   DeathParticle: {fileID: 278438140}
   RespawnParticle: {fileID: 786614795}
-  RespawnDelay: 0
-  PointPenaltyOnDeath: 1
+  RespawnDelay: 0.5
+  PointPenaltyOnDeath: 5
 --- !u!1 &278438140 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1921395535785210, guid: ab53a6e05e6474aeaba1abd6c2148cdb,
@@ -465,7 +465,7 @@ GameObject:
   - component: {fileID: 833558747}
   - component: {fileID: 833558746}
   - component: {fileID: 833558745}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -580,9 +580,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 991270603}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 73ef5a9ccac374e329fbf6534c5c5f53, type: 3}
+  m_Script: {fileID: 11500000, guid: d3b60f0dd0102449dbd57bebb69e66f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  LevelManager: {fileID: 134575345}
 --- !u!61 &991270605
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -894,7 +895,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4365644623843004, guid: 6b0b649f348d64df4a773fdcbf914beb, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -0.12
+      value: -0.096
       objectReference: {fileID: 0}
     - target: {fileID: 4365644623843004, guid: 6b0b649f348d64df4a773fdcbf914beb, type: 2}
       propertyPath: m_LocalPosition.z
@@ -928,13 +929,12 @@ Prefab:
     - target: {fileID: 1833505253387792, guid: 6b0b649f348d64df4a773fdcbf914beb, type: 2}
       propertyPath: m_Icon
       value: 
-      objectReference: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000,
-        type: 0}
+      objectReference: {fileID: 0}
     - target: {fileID: 212434778117443264, guid: 6b0b649f348d64df4a773fdcbf914beb,
         type: 2}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
     - target: {fileID: 212434778117443264, guid: 6b0b649f348d64df4a773fdcbf914beb,
         type: 2}
       propertyPath: m_Size.x
@@ -948,22 +948,34 @@ Prefab:
     - target: {fileID: 212434778117443264, guid: 6b0b649f348d64df4a773fdcbf914beb,
         type: 2}
       propertyPath: m_WasSpriteAssigned
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 212434778117443264, guid: 6b0b649f348d64df4a773fdcbf914beb,
         type: 2}
       propertyPath: m_Color.r
-      value: 1
+      value: 0.8207547
       objectReference: {fileID: 0}
     - target: {fileID: 212434778117443264, guid: 6b0b649f348d64df4a773fdcbf914beb,
         type: 2}
       propertyPath: m_Color.g
-      value: 1
+      value: 0.16647384
       objectReference: {fileID: 0}
     - target: {fileID: 212434778117443264, guid: 6b0b649f348d64df4a773fdcbf914beb,
         type: 2}
       propertyPath: m_Color.b
-      value: 1
+      value: 0.16647384
+      objectReference: {fileID: 0}
+    - target: {fileID: 4365644623843004, guid: 6b0b649f348d64df4a773fdcbf914beb, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 0.90047014
+      objectReference: {fileID: 0}
+    - target: {fileID: 4365644623843004, guid: 6b0b649f348d64df4a773fdcbf914beb, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 0.9151959
+      objectReference: {fileID: 0}
+    - target: {fileID: 4365644623843004, guid: 6b0b649f348d64df4a773fdcbf914beb, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 1.3074228
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6b0b649f348d64df4a773fdcbf914beb, type: 2}
@@ -990,7 +1002,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1634575004}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.1, y: 0, z: 0}
+  m_LocalPosition: {x: 0.0787, y: -0.0047, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 134575342}
@@ -1012,7 +1024,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8020ff9d4e6544b92a4b7ae79ac1a339, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 50
+  Speed: 30
   PC: {fileID: 134575339}
   EnemyDeath: {fileID: 278438140}
   ProjectileParticle: {fileID: 786614795}
@@ -1245,7 +1257,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2130342051}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.79, y: -1.16, z: 90.02615}
+  m_LocalPosition: {x: -0.73, y: 0.09, z: 90.02615}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}

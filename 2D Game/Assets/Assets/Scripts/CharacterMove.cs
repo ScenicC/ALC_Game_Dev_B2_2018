@@ -39,12 +39,13 @@ public class CharacterMove : MonoBehaviour {
         if (grounded)
             doubleJump = false;
 
-        if(Input.GetKeyDown (KeyCode.Space)&& !doubleJump && !grounded){
+        if (Input.GetKeyDown (KeyCode.Space)&& !doubleJump && !grounded){
             Jump();
             doubleJump = true;
         }
         //None-Slide Player
         moveVelocity = 0f;
+
 
         // This code makes the character move from side to side using the A&D keys
         if(Input.GetKey (KeyCode.D)){
@@ -60,10 +61,10 @@ public class CharacterMove : MonoBehaviour {
 
         //Player flip
         if (GetComponent<Rigidbody2D>().velocity.x > 0)
-            transform.localScale = new Vector3(0.1f, 0.1f, 1f);
+            transform.localScale = new Vector3(5f, 5f, 1f);
 
         else if (GetComponent<Rigidbody2D>().velocity.x < 0)
-            transform.localScale = new Vector3(-0.1f, 0.1f, 1f);
+            transform.localScale = new Vector3(-5f, 5f, 1f);
 
 	}
 
