@@ -1,6 +1,6 @@
 ﻿<Properties StartupConfiguration="{3BD99DA7-BD93-6366-344B-4F2C33A41684}|">
   <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="Unity.Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Assets/Scripts/CameraFollow.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Assets/Scripts/CoinPickup.cs">
     <Files>
       <File FileName="Assets/Assets/Scripts/PlayerShoot.cs" Line="17" Column="2" />
       <File FileName="Assets/Assets/Scripts/Projectile.cs" Line="31" Column="6" />
